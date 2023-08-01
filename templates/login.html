@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Attendance</title>
+    <link href="{% static "img/boot.ico" %}" rel="icon" type="image/x-icon"/>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+img
+  <!-- Favicons -->
+
+  <link href="{% static "img/apple-touch-icon.png" %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+  <link href="{% static "vendor/icofont/icofont.min.css" %}" rel="stylesheet">
+  <link href="{% static "vendor/boxicons/css/boxicons.min.css" %}" rel="stylesheet">
+  <link href="{% static "vendor/venobox/venobox.css" %}" rel="stylesheet">
+  <link href="{% static "vendor/owl.carousel/assets/owl.carousel.min.css" %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="{% static "vendor/aos/aos.css" %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static "css/style.css" %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio - v1.5.1
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body style="background-image: url('https://wallpaperaccess.com/full/1393334.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: right;
+background-size: 82.5% 100%;">
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <h style="font-size:40px;">
+  <p style="text-align:center;"></p>
+  </h>
+  <header id="header">
+    <div class="d-flex flex-column">
+        <p1 class="navbar-brand"><b style="color:yellow;font-size:24px;"><br>Automatic Attendance</br><p2 style="color:black;">.............</p2><p3>System</p3></b></p1>
+        <img class="img-fluid rounded-circle mx-auto" style="margin-top:150px;" src="https://www.nepalitelecom.com/wp-content/uploads/2021/08/Digital-World-Pros-and-Cons.jpg"/img/logo.png" %}"  /></span>
+	
+      <!-- .nav-menu -->
+      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+<img>
+    </div>
+  </header><!-- End Header -->
+
+  <!-- Container -->
+  <!-- page Content-->
+    {% if logged == 1 %}
+        <div class="alert alert-success alert-dismissible col-md-8" style="margin-left:450px;">
+            <button type="button" class="close" data-dismiss="alert" aria-label="close">&times;</button>
+            <center>Required Credential</center>
+        </div>
+    {% endif %}
+
+      {% if login_falied == 1 %}
+            <div class="alert alert-danger alert-dismissible col-md-8" style="margin-left:450px;">
+                <button type="button" class="close" data-dismiss="alert" aria-label="close">&times;</button>
+                <center>Invalid Username & Password!</center>
+            </div>
+      {% endif %}
+  <div class="container" style="width: 700px; margin-top: 200px; margin-right: 400px;">
+      <div class="col-4"></div>
+    <div style="margin-left:260px;">
+        <h2><b style="color:#fff;font-size: 40px;">LOGIN</b></h2>
+    </div>
+    <form action="/validate_login/" method="post">
+        <div class="form-group row" style="margin-top: 20px;">
+            <label class="col-sm-3 col-form-label text-dark" for="text"><h style="color:White;font-size: 20px;"><b>User Name</b></h></label>
+            <div class="col-sm-6">
+                <input class="form-control" name="username" id="text" placeholder="User Name" type="text">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3	 col-form-label text-dark" for="inputPassword"><h style="color:white;font-size: 20px;"><b>Password</b></h></label>
+            <div class="col-sm-6">
+                <input class="form-control" name="password" id="inputPassword" placeholder="Password" type="password">
+            </div>
+        </div>
+        <div class="row justify-content-md-center col-sm-9">
+            <button class="btn btn-md btn-outline-info" style="margin-top: 25px;margin-left: 160px;background-color: #008CBA;color: white;" type="submit"><b>Login</b></button>
+        </div>
+    </form>
+</div>
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="credits">
+       <i style="color:gray;"> Developed by </i><a class="develop"><b style="color:yellow;">AMIT</b></a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static "vendor/jquery/jquery.min.js" %}"></script>
+  <script src="{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
+  <script src="{% static "vendor/jquery.easing/jquery.easing.min.js" %}"></script>
+  <script src="{% static "vendor/php-email-form/validate.js" %}"></script>
+  <script src="{% static "vendor/waypoints/jquery.waypoints.min.js" %}"></script>
+  <script src="{% static "vendor/counterup/counterup.min.js" %}"></script>
+  <script src="{% static "vendor/isotope-layout/isotope.pkgd.min.js" %}"></script>
+  <script src="{% static "vendor/venobox/venobox.min.js" %}"></script>
+  <script src="{% static "vendor/owl.carousel/owl.carousel.min.js" %}"></script>
+  <script src="{% static "vendor/typed.js/typed.min.js" %}"></script>
+  <script src="{% static "/vendor/aos/aos.js" %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js">
+  </script>
+
+</body>
+
+</html>

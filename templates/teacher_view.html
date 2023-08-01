@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Attendance</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static "img/boot.ico" %}" rel="icon" type="image/x-icon"/>
+  <link href="{% static "img/apple-touch-icon.png" %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+  <link href="{% static "vendor/icofont/icofont.min.css" %}" rel="stylesheet">
+  <link href="{% static "vendor/boxicons/css/boxicons.min.css" %}" rel="stylesheet">
+  <link href="{% static "vendor/venobox/venobox.css" %}" rel="stylesheet">
+  <link href="{% static "vendor/owl.carousel/assets/owl.carousel.min.css" %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="{% static "vendor/aos/aos.css" %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static "css/style.css" %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio - v1.5.1
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body style="background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIEAvQMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAAAwECBAUGB//EADEQAAICAQMDAwQBAQkBAAAAAAABAhEDEiExBEFRBSJhEzJxkYGhFUJDUlNicrHBFP/EABoBAAMBAQEBAAAAAAAAAAAAAAACAwEFBAb/xAAhEQEBAAIABwEBAQAAAAAAAAAAAQIREhMUIUFRYTEEA//aAAwDAQACEQMRAD8A+xvkqNasjSVecshrYbpBxVGDRKQvIqlfwO4ZTKrpjROzsUE/ZH5ZeKoXO5y+EMRSKbLxil8sskktiO5ohObHDJ9ysw5unlFPR7kb2xb3Y+NsTyxlcmWNNtOK2+Bc+mjVqMXflHQ6mKlJtdikI6oV3ZXiQ4XKyYow2ljS/BmzQio3GNHY6npcmh6+y2oyR6VSxvV91DTIljkyT/zMTk1Je2TbN0+nlOPsvV48mKVxbi0006d8opsMssr4bFSnZpyQ334FSxxtqjWM03aow5lolS4OhLGudzHlXvkn5GjWdyZBMo6X8EpGtfd9Ke7JpIOKZV7s4zriTKvgmiVHyawllW7HSxrsUarlDEsKSKNadh5WUTZS2EWRHv8AgvODq1uLjxL4iMnSZcglW4LyVyOoseQjPL3P+RMskscnpS/kfHZb8mbKvcymKNiHnlLkpdA0UbvYbRO5vRfQWSUv8W9r/wDDN6r0kMsvqJU3y/kp/etDlm1R05N9qsNarf2ODnwyhtJbrj5MyVs7uXHGXtktSOdm6OWObadw8+CspHKk+xl6iNNPybs2KUMklyIyK1TXDHgZJQuHyJSNUlXIiUaboYPuj4Iqyy4LJUcZ2dI0/BFUXB8GN0W+BcnaGS2ixaVjQmRfDBu0WmttuxQYiG6ZWoNtzT35aLMqzS1P/wAWOSuE3QnL0DrbIv5Rd5JQftdF3mU4+H4CXKM1jfDFLop/6kP0zL1XS5McHO1JLmjpykLm9t+O5SZVPL/OacKVsVr0/Ju6rA8UtUF7H/QySipcx/ReXbzZTVZXNx2aRH1WuyHyxWqRlnBwe4xKt9ST8E6r5QuJZKxmM+fpo5Jxknp2p7Ceo6HFLE6Xv7OzdJb0Vlj1INseby4nG1KzPPE723/J3MvRynctSSj45ZklghF1V/kpKNvr6RJESTju5ASgAGqZEmlYpj2kyumPgNks2VWwqSpmul4Kyxxl8MaUtxZCsuB84Sj8oRKXYeVOzTPLVJ7cFXB8jJKn8BQ8SqiclzuSqb92yJqiskA2jqlHJglCPLWxxbOykJnjxxk/ZH9FMLpLOXLu5bFdRG6s66im6UY/oxeo05+3iOxSZbqWWOnM06SyRdxTK/bzwOmq/uE5cl+2PHd+SMuS9lshLkjZCrOVKuxjypPI2u6H5G2kkUywumh4x9VitiQ7E0ch30EFqIoACGSDBioEgAUn9rEOKkaMn2iGxonmz5cencW9uBuWW9CpLYrEMtKWVk0Sykxk6umuzFZot5Eo90Nw49bq6Xdmp4cdadN/Jm9N4bYwbY4t9kczLcoTb5e51uswS+k1jaafY5unZxlt2K4XyjnPDAWUVW/cFGiSyLHnx/Tlsva+BdG6aUk0zHKDjLTVsaMsUlFNPZC9NpGmOBveTpCZw0ydcGwlfTgADkPoEASQwAIZIUDLFQJoGaxVq00Z8mNrjdGkXkbquxspcu7BO9TIG5I72UaKx57CJbMXLcfONiXGuw8SyhmHv+R2Sc1BU/6CsKux2SlB2/kW/pp+M+Wbkqcmc7qYNS1UbJTViszjODTTZTHsje7mZFw1wUNE1S+BTVlpUrFKKur4LPYq+RiqzYnTa3HtWCUUvtb/AJGlLXvwIA5LvJIAAAAkACCCSACGij3LNlN72NidLnFUzNJU2acslwuRLVlJUsmeVlXuPlATJNMeVKxaKag5LuUyNuL3H8RrtRmzLTt5CfrMp2IkvAqbai7HMXP3bPkrEazNX2FyikaNNFZJFJU6zSjFoU4K9ma6XhC5R8DSlsIcNuSKGyTIUTSvcASBy3dAAABFgSABBDLGH1bqep6bpXLo8DzZZWkkm6eltOl8peADVXgTlyaVpXJzMvqnqdzjD01xlDVbkpSjKotqqXdr/ryX/tP1GUJOPpkoPhKTbd+7/bxsu/f97stx20t/AX8MxZPVvU9LWP0rJqTW/u93uSaW23tt29vy7Q/qvU+rxTksPp2XKlVOpLVt/wAfNrfx8q24ycv6cDja4LdH1PV5oSfUdJ9GSk1tJtVXPCs5svUvV/Y8XSOcXFtuXTzi099KafnZfHPAcY5X1plGT4bFZIyS3Tf8Bj631PJqUcL3T0SfTyjT1UtSlxtvs3smLn1/rMNGrpFu5KbhilLSk61bPfdOlzTTrmt5hOR9RTfZlZRd8M9BicpY4PJHTNxTlHmn4L0Nzfhem+vMuDfZi5waXD/R6qgpG8++mX+SXy8hTrh/orT8P9HsaCkb1HwvRz28c4N9n+iI45SbSXB7KgpB1F9Do57SAAed7QAAAAAAAFe4AASiH9oAAAAABPYjsAAAAAAT4JAAAAAAAAAAAAAD/9k=');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: right;
+background-size: 82.5% 100%;">
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+        <p1 class="navbar-brand"><b style="color:yellow;font-size:24px;"><br>Automatic Attendance</br><p2 style="color:black;">.............</p2><p3>System</p3></b></p1>
+
+      <img class="img-fluid rounded-circle mx-auto" style="margin-top:40px; width:200px;" src="https://www.nepalitelecom.com/wp-content/uploads/2021/08/Digital-World-Pros-and-Cons.jpg"/img/logo.png" %}"/img/logo.png" %}"  />
+
+      <nav class="nav-menu" style="margin-top:50px;">
+        <ul>
+          <li class="active"><a href="/teacher_view/"><i class="bx bx-task"></i> <span>Attendance</span></a></li>
+          <li><a href="/teacher_view_student/"><i class="bx bx-spreadsheet"></i> <span>View Student</span></a></li>
+          <li><a href="/logout/"><i class="bx bx-log-out"></i> <span>Logout</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- Container -->
+  <!-- page Content-->
+  {% if attend_success == 1 %}
+    <div class="alert alert-success alert-dismissible col-md-8" style="margin-left:450px;">
+        <button type="button" class="close" data-dismiss="alert" aria-label="close">&times;</button>
+        <center>Attendance Mark Successfully  </center>
+    </div>
+  {% endif %}
+<div class="container" style="margin-right: 150px;">
+    <div class="row justify-content-center ">
+        <div class="col-lg-12">
+            <section class="py-4 py-lg-5">
+                <h1 class="display-5 mb-3 text-center" style="color: #f768a1;margin-top: -20px;"><b>Attendance</b></h1>
+                <form action="/attendance/" method="post">
+                   <div class="form-group row mt-4" style="margin-left:260px;">
+                        <label class="col-sm-2 col-form-label text-dark ml-1">Select Date</label>
+                        <div class="col-sm-4">
+                            <input class="form-control" name="present_date" placeholder="... " type="date" required>
+                        </div>
+                    </div>
+                    <table class="table table-striped table-bordered" id="example" style="margin-top:30px;" >
+                      <thead>
+                        <tr>
+                          <td>Name</td>
+                          <td>Class</td>
+                          <td>Present</td>
+                        </tr>
+                      </thead>
+                    {% for items in teachers %}
+                      <tr>
+                        <td>{{items.name}}</td>
+                        <td>{{items.class_div}}</td>
+                        <td><input type="checkbox" name="present_{{items.id}}"></td>
+                      </tr>
+                      {% endfor %}
+
+                    </table>
+                  <div class="row justify-content-md-center col-sm-9 mt-5" style="margin-left:20px;">
+                            <button class="btn btn-md btn-outline-info" type="submit">Present
+                        </button>
+                    </div>
+              <script>
+
+                $('#example').DataTable();
+
+              </script>
+
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="credits">
+        <i style="color:gray;"> Developed by </i><a class="develop"><b style="color:yellow;">AMIT</b></a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static "vendor/jquery/jquery.min.js" %}"></script>
+  <script src="{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
+  <script src="{% static "vendor/jquery.easing/jquery.easing.min.js" %}"></script>
+  <script src="{% static "vendor/php-email-form/validate.js" %}"></script>
+  <script src="{% static "vendor/waypoints/jquery.waypoints.min.js" %}"></script>
+  <script src="{% static "vendor/counterup/counterup.min.js" %}"></script>
+  <script src="{% static "vendor/isotope-layout/isotope.pkgd.min.js" %}"></script>
+  <script src="{% static "vendor/venobox/venobox.min.js" %}"></script>
+  <script src="{% static "vendor/owl.carousel/owl.carousel.min.js" %}"></script>
+  <script src="{% static "vendor/typed.js/typed.min.js" %}"></script>
+  <script src="{% static "/vendor/aos/aos.js" %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
